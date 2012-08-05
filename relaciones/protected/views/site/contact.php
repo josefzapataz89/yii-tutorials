@@ -23,7 +23,7 @@ If you have business inquiries or other questions, please fill out the following
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'contact-form',
-	'enableClientValidation'=>true,
+	#'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),

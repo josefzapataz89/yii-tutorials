@@ -1,0 +1,41 @@
+pasoso para realizar pruebas
+
+1.Crear variables de entorno de PHP para usar
+php y pear en cualquier path en la consola
+
+2.instlas pear (como ya viene insalado)
+apt-get update
+apt-get install php-pear
+
+3.actualizar pear:
+pear upgrade pear
+
+4.añadimos el canal desde 
+donde encontraremos el código de PHPUnit 
+al “repositorio” de pear y lo instalamos
+
+pear channel-discover pear.phpunit.de
+pear channel-discover components.ez.no
+pear channel-discover pear.symfony-project.com
+pear install phpunit/PHPUnit // aqui instalamos
+
+5.Probamos que esta bien instalado
+phpunit
+
+6.Descargamos seleniusm RC, lo descargamos desde
+http://seleniumhq.org/download/ un archivo llamado 
+selenium-serverstandalone-2.0rc2.jar
+
+7.ejecutamos el ,jar de selenium para usarlo, 
+hay que tener el entorno de java instalado y en el directorio que
+descomprimimos el ,jar de selenium ejecutamos lo siguiente
+
+java -jar selenium-server-standalone-2.0rc2.jar 
+
+8.Instalamos xdebug la ultima versión se descarga el binario 
+aqui http://www.xdebug.org/download.php y se instala asi
+configurandolo en el php.ini
+[xdebug]
+zend_extension=c:/path/to/your/php_xdebug_version.dll
+
+

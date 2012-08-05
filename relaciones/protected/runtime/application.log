@@ -3701,3 +3701,283 @@ Stack trace:
 REQUEST_URI=/relaciones/es/usuarios/index/2/Mi+pagina
 in C:\wamp\www\relaciones\protected\controllers\UsuariosController.php (244)
 in C:\wamp\www\relaciones\index.php (13)
+2012/08/04 04:33:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Folio))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Folio')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\FolioController.php(166): CActiveDataProvider->__construct('Folio')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): FolioController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('folio/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/folio/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/
+---
+2012/08/04 04:33:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Experiencia))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Experiencia')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\ExperienciaController.php(143): CActiveDataProvider->__construct('Experiencia')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): ExperienciaController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('experiencia/ind...')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/experiencia/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/
+---
+2012/08/04 04:33:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Ciudad))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Ciudad')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\CiudadController.php(140): CActiveDataProvider->__construct('Ciudad')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): CiudadController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('ciudad/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/ciudad/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/
+---
+2012/08/04 04:33:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Usuarios))
+#7 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\Usuarios.php(30): CActiveRecord::model('Usuarios')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\components\UserIdentity.php(20): Usuarios::model()
+#9 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\SiteController.php(89): CModel->validate()
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/site/login
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
+2012/08/05 05:31:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Ciudad))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Ciudad')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\CiudadController.php(140): CActiveDataProvider->__construct('Ciudad')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): CiudadController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('ciudad/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/ciudad/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
+2012/08/05 05:31:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Usuarios))
+#7 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\Usuarios.php(30): CActiveRecord::model('Usuarios')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\components\UserIdentity.php(20): Usuarios::model()
+#9 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\SiteController.php(90): CModel->validate()
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/site/login
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
+2012/08/05 05:35:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Ciudad))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Ciudad')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\CiudadController.php(140): CActiveDataProvider->__construct('Ciudad')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): CiudadController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('ciudad/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/ciudad/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/index
+---
+2012/08/05 05:35:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Estudios))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Estudios')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\EstudiosController.php(130): CActiveDataProvider->__construct('Estudios')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): EstudiosController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estudios/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/estudios/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/index
+---
+2012/08/05 05:56:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Estudios))
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Estudios')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\EstudiosController.php(130): CActiveDataProvider->__construct('Estudios')
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): EstudiosController->actionIndex()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estudios/index')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/estudios/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/index
+---
+2012/08/05 06:02:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'datos2'' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Usuarios))
+#7 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\Usuarios.php(30): CActiveRecord::model('Usuarios')
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\components\UserIdentity.php(20): Usuarios::model()
+#9 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\SiteController.php(90): CModel->validate()
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#20 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/site/login
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
