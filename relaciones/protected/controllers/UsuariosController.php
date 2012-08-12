@@ -1,6 +1,6 @@
 <?php
 
-class UsuariosController extends GSeguroController
+class UsuariosController extends Controller #GSeguroController
 {
 	public $layout='//layouts/column2';
 	

@@ -135,7 +135,7 @@ class Usuarios extends GActiveRecord
 	 */
 	public function validatePassword($password)
 	{
-		return $this->hashPassword($password,$this->session)===$this->password;
+		return $this->hashPassword($password,$this->session)==$this->password;
 	}
 
 	/**
@@ -146,7 +146,8 @@ class Usuarios extends GActiveRecord
 	 */
 	public function hashPassword($password,$salt)
 	{
-		return md5($salt.$password);
+		#return md5($salt.$password);
+		return $password;
 	}
 
 	/**

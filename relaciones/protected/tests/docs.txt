@@ -7,7 +7,7 @@ php y pear en cualquier path en la consola
 apt-get update
 apt-get install php-pear
 
-3.actualizar pear:
+3.actualizar pear: (no se pudo)
 pear upgrade pear
 
 4.añadimos el canal desde 

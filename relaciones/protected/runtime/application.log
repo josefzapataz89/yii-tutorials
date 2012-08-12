@@ -3981,3 +3981,50 @@ Stack trace:
 REQUEST_URI=/yii-tutorials/relaciones/es/site/login
 HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
 ---
+2012/08/12 06:14:07 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `usuarios` `t` WHERE LOWER(username)=? LIMIT 1.
+in C:\xampp\htdocs\yii-tutorials\relaciones\protected\components\UserIdentity.php (20)
+in C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\SiteController.php (90)
+2012/08/12 06:14:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `usuarios` `t` WHERE LOWER(username)=? LIMIT 1' in C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii-tutorials\relaciones\protected\components\UserIdentity.php(20): CActiveRecord->find('LOWER(username)...', Array)
+#4 C:\xampp\htdocs\yii-tutorials\relaciones\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\SiteController.php(90): CModel->validate()
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#14 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/site/login
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
+2012/08/12 06:31:28 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsuariosController"."breadcrumbs" no se encuentra definida.' in C:\xampp\htdocs\yii-tutorials\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\yii-tutorials\relaciones\protected\views\usuarios\index.php(2): CComponent->__set('breadcrumbs', Array)
+#1 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\yii-tutorials\relaciones\protected\controllers\UsuariosController.php(273): CController->render('index', Array)
+#6 C:\xampp\htdocs\yii-tutorials\yii\framework\web\actions\CInlineAction.php(50): UsuariosController->actionIndex()
+#7 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#11 C:\xampp\htdocs\yii-tutorials\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/index')
+#12 C:\xampp\htdocs\yii-tutorials\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii-tutorials\relaciones\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii-tutorials/relaciones/es/usuarios/index
+HTTP_REFERER=http://localhost/yii-tutorials/relaciones/es/site/login
+---
