@@ -235,12 +235,29 @@ class UsuariosController extends Controller #GSeguroController
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
+	public function actionHtml()
+	{
+		if(Yii::app()->request->isAjaxRequest)
+			echo "<em>Hola ya fuí y vine por AJAX!! <b>".$_GET['mensaje']."</b></em>";
+		else
+			throw new CHttpEcxception(404);
+	}
+	
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-	
+		if(Yii::app()->request->isAjaxRequest)
+		{
+			$user=Usuarios::model()->findAll();
+			echo CJSON::encode($user);
+			Yii::app()->end();
+		}	
+		echo "<pre>";
+		print_r($_POST);
+		print_r($_GET);
+		echo "</pre>";
 		// creacion del la estructura
 		/*
 		$auth=Yii::app()->authManager;

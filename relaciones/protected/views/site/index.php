@@ -5,10 +5,48 @@
 
 		<p>Felicitaciones tu has creado tu primera Aplicación.</p>
 		
-		<br><?php echo CHtml::link("Mi link",array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?>
-		<br><?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title")),array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?>
-		<br><?php echo CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title"));?>
 		
+<table class="table table-bordered table-condensed table-striped">
+	<thead><tr><th colspan="2">Usos de CHtml/CHtml utilities</th></tr></thead>
+	<tbody>
+		<tr class="light">
+			<td>Link simple</td>
+			<td><?php echo CHtml::link("Mi link",array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?></td>
+		</tr>
+		<tr class="light">
+			<td>Link simple</td>
+			<td><?php echo CHtml::link("Mi link",Yii::app()->controller->createUrl("usuarios/index",array("id"=>"2","title"=>"Mi pagina")));?></td>
+		</tr>
+		<tr class="light">
+			<td>Link simple</td>
+			<td><a href="<?php echo $this->createUrl("usuarios/index",array("id"=>"2","title"=>"Mi pagina"));?>">MI link con a</a></td>
+		</tr>
+		<tr class="light">
+			<td>Link absolutos email</td>
+			<td><?php echo CHtml::link("Mi link absoluto",$this->createAbsoluteUrl("usuarios/index",array("id"=>"2","title"=>"MI titulo")));?></td>
+		</tr>
+		<tr class="light">
+			<td>Link externos</td>
+			<td><?php echo CHtml::link("Mi link absoluto","http://www.google.com");?></td>
+		</tr>
+		<tr class="light">
+			<td>Link pdf</td>
+			<td><?php echo CHtml::link("Mi link a un pdf",Yii::app()->request->baseUrl."/upload/ejemplo.pdf");?></td>
+		</tr>
+		<tr class="light">
+			<td>Link doc</td>
+			<td><?php echo CHtml::link("Mi link a un doc",Yii::app()->request->baseUrl."/upload/ejemplo.docx");?></td>
+		</tr>
+		<tr class="dark">
+			<td>Link con imagen</td>
+			<td><?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title")),array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?></td>
+		</tr>
+		<tr class="light">
+			<td>Imagen</td>
+			<td><?php echo CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title"));?></td>
+		</tr>
+	</tbody>
+</table>
 		
 		<p>You may change the content of this page by modifying the following two files:</p>
 		<ul>
