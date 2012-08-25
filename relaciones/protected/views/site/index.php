@@ -35,8 +35,32 @@
 		</tr>
 		<tr class="light">
 			<td>Link doc</td>
-			<td><?php echo CHtml::link("Mi link a un doc",Yii::app()->request->baseUrl."/upload/ejemplo.docx");?></td>
+			<td><?php echo CHtml::link("Mi link a un doc",Yii::app()->request->baseUrl."/upload/ejemplo.jpg",array("confirm"=>"Estas seguro?"));?></td>
 		</tr>
+		<tr class="dark">
+			<td>Link enviar parametros POST</td>
+			<td><?php echo CHtml::link("Parametros POST",null,array(
+				"submit"=>array("usuarios/index","id"=>"12345"),
+				"params"=>array("id_post"=>"Je je je soy post"),
+				"confirm"=>"Hey cuidado NOOOOOOOO!!!!!",
+				)
+			);?></td>
+		</tr>
+		
+		<tr class="dark">
+			<td>Link enviar parametros AJAX<div id="escribir"></div></td>
+			<td><?php echo CHtml::link("Parametros AJAX","",array(
+				"ajax"=>array(
+						"url"=>$this->createUrl("usuarios/index",array("idget"=>"je je soy geT")),
+						"type"=>"post",
+						"dataType"=>"html",
+						"data"=>array("idpost"=>"soy post"),
+						"update"=>"#escribir",
+					),
+				)
+			);?></td>
+		</tr>
+		
 		<tr class="dark">
 			<td>Link con imagen</td>
 			<td><?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title")),array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?></td>

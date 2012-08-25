@@ -248,12 +248,13 @@ class UsuariosController extends Controller #GSeguroController
 	 */
 	public function actionIndex()
 	{
+	
 		if(Yii::app()->request->isAjaxRequest)
 		{
-			$user=Usuarios::model()->findAll();
-			echo CJSON::encode($user);
+			echo CJSON::encode($_GET);
+			echo CJSON::encode($_POST);
 			Yii::app()->end();
-		}	
+		}
 		echo "<pre>";
 		print_r($_POST);
 		print_r($_GET);
