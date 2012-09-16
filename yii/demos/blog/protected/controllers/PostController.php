@@ -130,7 +130,7 @@ class PostController extends Controller
 			),
 			'criteria'=>$criteria,
 		));
-
+		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

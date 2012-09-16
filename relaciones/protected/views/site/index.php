@@ -39,7 +39,7 @@
 		</tr>
 		<tr class="dark">
 			<td>Link enviar parametros POST</td>
-			<td><?php echo CHtml::link("Parametros POST",null,array(
+			<td><?php echo CHtml::link("Parametros POST","javascript:void(0)",array(
 				"submit"=>array("usuarios/index","id"=>"12345"),
 				"params"=>array("id_post"=>"Je je je soy post"),
 				"confirm"=>"Hey cuidado NOOOOOOOO!!!!!",
@@ -49,7 +49,7 @@
 		
 		<tr class="dark">
 			<td>Link enviar parametros AJAX<div id="escribir"></div></td>
-			<td><?php echo CHtml::link("Parametros AJAX","",array(
+			<td><?php echo CHtml::link("Parametros AJAX","#",array(
 				"ajax"=>array(
 						"url"=>$this->createUrl("usuarios/index",array("idget"=>"je je soy geT")),
 						"type"=>"post",
@@ -62,13 +62,45 @@
 		</tr>
 		
 		<tr class="dark">
-			<td>Link con imagen</td>
-			<td><?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title")),array("usuarios/index","id"=>"2","title"=>"Mi pagina"));?></td>
+			<td>Link enviar parametros AJAX<div id="escribir"></div></td>
+			<td><?php echo CHtml::ajaxLink("Parametros AJAX",$this->createUrl("usuarios/index",array("idget"=>"je je soy geT")),array("update"=>"#escribir"));?></td>
 		</tr>
+		
+		<tr class="dark">
+			<td>Link para corros</td>
+			<td><?php echo CHtml::mailto("Enviame a mi correo aqui","micorreo@gmail.com");?></td>
+		</tr>
+		
+		<tr class="dark">
+			<td>CHtml::encode()</td>
+			<td><?php echo CHtml::encode("<a href='www.google.com'>hola como estas</a>");?></td>
+		</tr>
+		
+		<tr class="dark">
+			<td>CHtml::tag()</td>
+			<td><?php echo CHtml::tag("span",array("style"=>"color:#000;"),"Holaaaaaaaaaa");?></td>
+		</tr>
+		
 		<tr class="light">
-			<td>Imagen</td>
-			<td><?php echo CHtml::image(Yii::app()->request->baseUrl."/images/004.png","Eliminar",array("title"=>"Mi title"));?></td>
+			<td>Imagen  <?php echo Yii::app()->request->baseUrl;?> </td>
+			<td><?php echo GHtml::image("004.png");?></td>
 		</tr>
+		
+		<tr class="light">
+			<td>Imagen  <?php echo Yii::app()->request->baseUrl;?> </td>
+			<td><?php echo GHtml::imageAbs("004.png");?></td>
+		</tr>
+		
+		<tr class="light">
+			<td>Imagen  <?php echo Yii::app()->request->baseUrl;?> </td>
+			<td><?php echo GHtml::imageUrl("004.png");?></td>
+		</tr>
+		
+		<tr class="light">
+			<td>Imagen  <?php echo Yii::app()->request->baseUrl;?> </td>
+			<td><?php echo GHtml::imageAbsUrl("004.png");?></td>
+		</tr>
+		
 	</tbody>
 </table>
 		
