@@ -14,12 +14,12 @@ class TareasController extends Controller{
 	public function actionEdit($id){
 		$model=Tareas::model()->findByPk($id); // esto es como hacer un select de tu registro con limit 1
 		
-		if(isset($_POST['Tareas'])){ // valkidamos si trae algun valor en el formulario
+		if(isset($_POST['Tareas'])){ // validamos si trae algun valor en el formulario
 		
-		$model->attributes=$_POST['Tareas']; // se asignan los valores del formulario a la clase modelo
+			$model->attributes=$_POST['Tareas']; // se asignan los valores del formulario a la clase modelo
 		
-		if($model->save()) // esto es como hacer un UPDATE tareas... WHERE id = {el ide que trae la accion}
-			$this->redirect(array('view','id'=>$model->id)); // esto es como hacer un header location en el caso que guarde
+			if($model->save()) // esto es como hacer un UPDATE tareas... WHERE id = {el ide que trae la accion}
+				$this->redirect(array('view','id'=>$model->id)); // esto es como hacer un header location en el caso que guarde
 		}
 		$this->render('edit',array('model'=>$model));
 	}
