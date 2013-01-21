@@ -37,6 +37,10 @@ class GEmailLogRoute extends CEmailLogRoute
 					<th style=\"width:120px\">IP</th>
 					<th style=\"text-align:left\">".Yii::app()->request->getUserHostAddress()."</th>
 				</tr>
+				<tr style=\"background-color:#ccc\">
+					<th style=\"width:120px\">User Agent</th>
+					<th style=\"text-align:left\">".Yii::app()->request->getUserAgent()."</th>
+				</tr>
 				</tbody>
 			</table>";
 		$message.=$this->render('log',$logs);
